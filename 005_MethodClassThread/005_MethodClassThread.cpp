@@ -81,7 +81,7 @@ int main(int argc, char* argv[])
 	for (size_t i = 1; i < 10; i++)
 	{
 		cout << "ID потока = " << this_thread::get_id() << "\tmain\t" << i << endl;		// id текущего потока
-		this_thread::sleep_for(chrono::milliseconds(500));								// "усыпить" поток на 0.5 сек. (1000 msec. = 1 sec.)
+		this_thread::sleep_for(chrono::milliseconds(500));	// "усыпить" поток на 0.5 сек. (1000 msec. = 1 sec.)
 	}
 
 	cout << "\n*** END MAIN ****" << endl;
