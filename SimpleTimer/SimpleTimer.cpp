@@ -66,7 +66,7 @@ int main(int argc, char* argv[])
 
 	int result;
 	thread t([&result]() { result = Sum(2, 5); });		// THREAD/LAMDA - выполние в двух потоках 
-	//result = Sum(2, 5);									// выполнение в одном потоке
+	//result = Sum(2, 5);					// выполнение в одном потоке
 
 	//auto start = chrono::high_resolution_clock::now();	// возвращает текущую "точку" времени в автопеременной "start" 
 	for (size_t i = 1; i <= 10; i++)
@@ -74,7 +74,7 @@ int main(int argc, char* argv[])
 		cout << "ID потока = " << this_thread::get_id() << "\tmain works\t" << i << endl;
 		this_thread::sleep_for(chrono::milliseconds(500));
 	}
-	//auto end = chrono::high_resolution_clock::now();		// возвращает конечную "точку" времени в автопеременной "end" 
+	//auto end = chrono::high_resolution_clock::now();	// возвращает конечную "точку" времени в автопеременной "end" 
 	//chrono::duration<float> duration = end - start;
 	//cout << "\n**** Duration: " << duration.count() << "s\n" << endl;
 
